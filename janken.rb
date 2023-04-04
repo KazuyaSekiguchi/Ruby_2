@@ -6,6 +6,11 @@ def janken
  myhand = gets.to_i
  yourhand = rand(3)
  jankens = ["グー","チョキ","パー"]
+ 
+ if myhand == 3
+   puts "ゲームを終了します"
+   exit!
+ end
 
  puts "ホイ！"
  puts "------------------------"
