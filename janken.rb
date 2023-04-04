@@ -18,14 +18,14 @@ def janken
    return true
  elsif (myhand == 0 && yourhand == 1)||(myhand == 1 && yourhand == 2)||(myhand == 2 && yourhand == 0)
    puts "あなたの勝ちです！"
-   attimuitehoi
+   attimuitehoi1
  else
    puts "あなたの負けです！"
-   return false
+   attimuitehoi2
  end
 end
 
-def attimuitehoi
+def attimuitehoi1
   puts "あっちむいて〜"
   puts "0(上)1(下)2(左)3(右)"
   
@@ -47,6 +47,27 @@ def attimuitehoi
   end
 end
 
+def attimuitehoi2
+  puts "あっちむいて〜"
+  puts "0(上)1(下)2(左)3(右)"
+  
+  myhand2 = gets.to_i
+  yourhand2 = rand(4)
+  attimuitehoi = ["上","下","左","右"]
+  
+  puts "ホイ！"
+  puts "------------------------"
+  puts "あなた：#{attimuitehoi[myhand2]}"
+  puts "相手：#{attimuitehoi[yourhand2]}"
+  puts "------------------------"
+
+  if myhand2 == yourhand2
+    puts "あなたの負けです！"
+  else
+    puts "じゃんけん..."
+    return true
+  end
+end
 
 next_game = true
 
